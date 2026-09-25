@@ -3,102 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>TM | منتجات غذائية</title>
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #071426;
-      color: #f4e5bd;
+      font-family: Arial, sans-serif;
+      background: #07152f;
+      color: #f5e6b8;
+      line-height: 1.6;
     }
 
     header {
-      background: #050d19;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #c9a85c;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: auto;
+      padding: 25px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #061126;
+      border-bottom: 1px solid #c9a84e;
     }
 
     .logo {
-      font-size: 32px;
+      font-size: 35px;
       font-weight: bold;
-      color: #d8b866;
-      letter-spacing: 3px;
+      color: #f5e6b8;
+      letter-spacing: 4px;
     }
 
-    nav a {nav a:hover {
-    color: #d4af37;
-    transition: 0.3s;
-}
-      color: #f4e5bd;
+    nav a {
+      color: #f5e6b8;
       text-decoration: none;
-      margin-right: 20px;
-      font-size: 15px;
+      margin: 0 12px;
+      font-weight: bold;
     }
 
-    nav a:hover {align-items: center;
-gap: 20px;
-flex-wrap: wrap;
-      color: #d8b866;
+    nav a:hover {
+      color: #c9a84e;
     }
 
-    .hero {.hero h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-    transition: 0.3s;
-}
-.hero p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-      min-height: 85vh;
+    .hero {
+      min-height: 70vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 30px;
+      padding: 60px 20px;
+      background: linear-gradient(
+        rgba(7, 21, 47, .92),
+        rgba(7, 21, 47, .98)
+      );
+    }
 
-     <section id="products" class="products">
-  <h2>منتجات TM</h2>
-  <p>منتجاتنا المصنوعة بعناية وبجودة عالية</p>
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
 
-  <div class="products-container">
+    .hero h1 span {
+      color: #c9a84e;
+    }
 
-    <div class="product-card">
-      <h3>🥒 مخلل TM</h3>
-      <p>مخلل لذيذ ومحضر بعناية.</p>
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #ddd;
+      font-size: 19px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 30px;
+      background: #c9a84e;
+      color: #07152f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .products {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-text {
+      color: #ccc;
+      margin-bottom: 45px;
+    }
+
+    .products-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .product-card {
+      width: 290px;
+      padding: 35px 25px;
+      background: #0d2145;
+      border: 1px solid #c9a84e;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      transition: transform .3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: #f5e6b8;
+    }
+
+    .product-card p {
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .product-button {
+      display: inline-block;
+      padding: 10px 22px;
+      background: #c9a84e;
+      color: #07152f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .about {
+      padding: 70px 20px;
+      text-align: center;
+      background: #061126;
+    }
+
+    .about h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #040b1b;
+      color: #aaa;
+      border-top: 1px solid #c9a84e;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+
+      .product-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">TM</div>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">من نحن</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>مرحباً بكم في <span>TM</span></h1>
+
+      <p>
+        علامة جزائرية ناشئة تهدف إلى تقديم منتجات غذائية
+        بجودة عالية، بطابع عصري وهوية مميزة.
+      </p>
+
+      <a href="#products" class="hero-button">
+        اكتشف منتجاتنا
+      </a>
     </div>
+  </section>
 
-    <div class="product-card">
-      <h3>🐟 سردين TM</h3>
-      <p>سردين محفوظ بجودة عالية.</p>
+  <section class="products" id="products">
+
+    <h2>منتجات TM</h2>
+
+    <p class="section-text">
+      اختر منتجك المفضل من مجموعة TM
+    </p>
+
+    <div class="products-container">
+
+      <div class="product-card">
+        <div class="product-icon">🥒</div>
+
+        <h3>مخلل TM</h3>
+
+        <p>
+          مخللات محضرة بعناية بطعم مميز وجودة عالية.
+        </p>
+
+        <a href="#" class="product-button">
+          اطلب الآن
+        </a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🐟</div>
+
+        <h3>سردين TM</h3>
+
+        <p>
+          سردين محفوظ بجودة عالية وطعم لذيذ.
+        </p>
+
+        <a href="#" class="product-button">
+          اطلب الآن
+        </a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🍓</div>
+
+        <h3>مربى TM</h3>
+
+        <p>
+          مربى بطعم غني ومناسب للفطور والوجبات الخفيفة.
+        </p>
+
+        <a href="#" class="product-button">
+          اطلب الآن
+        </a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="product-card">
-      <h3>🍓 مربى TM</h3>
-      <p>مربى بطعم غني ومميز.</p>
-    </div>
+  <section class="about" id="about">
 
-  </div>
-</section>
+    <h2>عن TM</h2>
+
+    <p>
+      TM مشروع غذائي جزائري طموح، بدأ بفكرة بسيطة
+      ويهدف إلى تطوير مجموعة متنوعة من المنتجات
+      التي يحتاجها السوق، مع التركيز على الجودة
+      والهوية المميزة.
+    </p>
+
+  </section>
+
+  <footer>
+    © 2026 TM — جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
